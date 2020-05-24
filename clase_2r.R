@@ -41,3 +41,44 @@ mat4[,3]
 # elemntos especiales
 -1:1/0
 x<-NA
+
+
+#  estructura de decision if
+x<- runif(1,0,10)
+if(x>5){
+  y<-TRUE
+}else{
+  y<-FALSE
+}
+
+# #  en general
+# if(cond1){
+#   bloque de codigo 
+# }else{
+#   otro bloque de codigo
+# }
+
+####Estructura de repeticion: FOR####
+for(i in 1:5) #para todos los i escalares que esta del 1al 5
+  print(i)
+####paquetes o librerias en r
+sessionInfo()
+# para cargar el paquete extradir 
+library(extraDistr)#cargamos el paquete de la libreria
+
+
+####definicion de funciones de usuario e r####
+# definicion
+nota1<-runif(10,1,19)
+nota2<-sample(1:20,10)
+miprimerDF<-data.frame(NOTAP=nota1,NOTAF=nota2)
+class(miprimerDF)
+dim(miprimerDF)
+str(miprimerDF)
+# para ver como hoja de calculo se jecuta view
+
+####accesoa la informacion####
+miprimerDF$NOTAP # para selecionar las variables se coloca el simbolo del dolar
+miprimerDF[[1]]  # para obtener la primera clumna
+# o dejar el primer espacio en blanco , 1 y se seleccionan las variables de esa fila
+help("readline")
